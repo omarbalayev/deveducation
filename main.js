@@ -29,7 +29,7 @@ function oddOrEven() {
 
 /* 2nd question */
 
-/* if statemant version */
+/* if statement version */
 function quarterFind() {
     let x = Number(document.getElementById('input_x').value);
     let y = Number(document.getElementById('input_y').value);
@@ -125,10 +125,17 @@ let compareResult = concArr < multipArr;
     console.log(concArr, multipArr);
 };
 
-
+//short function
+// const getMaxOfProductSum = (first, second, third) => {
+//     const product = first * second *  third;
+//     const sum = first + second + third;
+//     return product > sum ? product + 3 : sum + 3;
+// }; 
 
 
 /* 5th question */
+//write in if else statement. switch case switchs true boolen result. it is not recommended.
+
 // switch case
 
 function findGrade() {
@@ -184,6 +191,7 @@ console.log(`checking if type of input is number:`,l, typeof l,h,typeof h);
         document.getElementById('sumUserText').innerHTML = `${sum2}`
     };
 console.log(`checking if type of output is number:`,i, typeof i,sum2,typeof sum2);
+}
 
 //short version 
 
@@ -194,5 +202,68 @@ console.log(`checking if type of output is number:`,i, typeof i,sum2,typeof sum2
     // while(i<h){
     //     sum2+=i;
     //     i+=2;};
-    // document.getElementById('sumUserText').innerHTML = `${sum2}`;
+    // document.getElementById('sumUserText').innerHTML = `${sum2}`;}
+
+//-------------------------------------------------
+//below all replies from classroom discussion. not done by me.
+
+ // 7th question
+    //teacher version
+    // const getIsPOrime = number => {
+    //     for (let i=2; i<tempNumber/2; i++) {
+    //         if (number% i) {
+    //             return false;
+    //         }
+    //     }
+    //     return true;
+    // };
+
+/* 8th */
+const getSquareRoot = number => {
+    let result = 1;
+
+    for (let i=1; i<number/2; i++) {
+        const difference  = i**2 - number;
+    }
+    if (difference <1 || difference > -1) {
+        return i;
+    } else {
+        result = i;
+    } 
+    return result;
 };
+
+
+// Circle 6 question
+
+const getMirrorNumber = number => {
+    let result = 0;
+    let tempNumber = number;
+    let remainder = 0;
+
+    while (tempNumber>0) {
+        remainder = tempNumber % 10;
+        result += remainder;
+        tempNumber = (tempnumber - remainder) / 10;
+        // if tempNumber will be 0  it returns false and second order will not called
+        tempNumber && (result*=10);
+    }
+    return result;
+};
+
+
+
+// const getMinIndex = array => {
+//     let minIndex = 0;
+//     let
+
+const reverseArray = array => {
+    let result = [];
+
+    for ( let i= array.lenght-1; i>=0; i-- ) {
+        result[index] = array[i];
+        index++;
+// we can use result[result.length] = array[i]
+    }
+    return result;
+}
